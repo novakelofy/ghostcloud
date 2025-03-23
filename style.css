@@ -1,0 +1,222 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+    }
+    
+    /* Estilos do Header */
+    header {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+padding: 60px 20px;
+text-align: center;
+position: relative;
+overflow: hidden;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+font-size: 3em;
+margin-bottom: 15px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+animation: fadeInDown 1s ease-out;
+}
+header .header-description {
+font-size: 1.3em;
+color: #ecf0f1;
+margin-bottom: 30px;
+animation: fadeInUp 1s ease-out;
+}
+/* Animações de Fade */
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+/* Estilo da Nuvem */
+.cloud {
+position: absolute;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+width: 120px;
+height: 70px;
+background: url('cloud.png') no-repeat center/contain;
+animation: floatCloud 25s linear infinite alternate, tiltCloud 5s ease-in-out infinite alternate;
+}
+/* Animação de Flutuação e Inclinação */
+@keyframes floatCloud {
+0% {
+transform: translateX(-60%) translateY(10px);
+}
+100% {
+transform: translateX(-40%) translateY(10px);
+}
+}
+@keyframes tiltCloud {
+0% {
+transform: translateX(-50%) rotate(2deg);
+}
+100% {
+transform: translateX(-50%) rotate(-2deg);
+}
+}
+/* Estilo do Botão CTA */
+.cta-button {
+background-color: #2ecc71;
+color: white;
+padding: 15px 30px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 1.2em;
+transition: background-color 0.3s ease, transform 0.3s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.cta-button:hover {
+background-color: #27ae60;
+transform: scale(1.05);
+}
+/* Estilos das Features */
+.features {
+display: flex;
+justify-content: space-around;
+padding: 60px 20px;
+flex-wrap: wrap;
+background-color: #ecf0f1;
+}
+.feature-item {
+width: 320px;
+padding: 30px;
+background-color: white;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center;
+margin-bottom: 30px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+transform: translateY(-8px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.feature-item img {
+width: 80px;
+height: 80px;
+margin-bottom: 20px;
+}
+.feature-item h3 {
+font-size: 1.8em;
+color: #3498db;
+margin-bottom: 10px;
+}
+.feature-item p {
+color: #666;
+font-size: 1.1em;
+line-height: 1.6;
+}
+/* Estilos dos Planos */
+.plans {
+display: flex;
+justify-content: center;
+gap: 30px;
+padding: 60px 20px;
+flex-wrap: wrap;
+}
+.plan {
+background-color: white;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 350px;
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.plan:hover {
+transform: translateY(-8px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.plan img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+border-bottom: 1px solid #ddd;
+}
+.plan h3 {
+padding: 20px;
+margin: 0;
+font-size: 1.6em;
+color: #3498db;
+text-align: center;
+}
+.plan p {
+padding: 0 20px 20px;
+margin: 0;
+color: #555;
+text-align: center;
+font-size: 1.1em;
+line-height: 1.6;
+}
+.plan .price {
+font-size: 2em;
+color: #2ecc71;
+text-align: center;
+padding: 15px;
+font-weight: bold;
+}
+.plan .add-to-cart {
+display: block;
+background-color: #3498db;
+color: white;
+text-align: center;
+padding: 18px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+font-size: 1.2em;
+}
+.plan .add-to-cart:hover {
+background-color: #2980b9;
+}
+/* Estilos do Footer */
+footer {
+text-align: center;
+padding: 30px;
+background-color: #2c3e50;
+color: white;
+font-size: 1em;
+letter-spacing: 1px;
+}
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+.plans {
+flex-direction: column;
+align-items: center;
+}
+.plan {
+width: 100%;
+max-width: 400px;
+}
+.features {
+flex-direction: column;
+align-items: center;
+}
+.feature-item {
+width: 100%;
+max-width: 400px;
+}
+}
